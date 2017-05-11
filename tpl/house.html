@@ -1,0 +1,26 @@
+<!-- partial page for third tab "House" with map of the house we stay, features and inside photos -->
+
+<div id="div-house-info">
+    <ng-map zoom="19" center="{{ CTRL.houseCoord }}" id="div-house-map" map-type-id="SATELLITE">
+        <marker position="{{CTRL.houseCoord}}" title="5817 Serrano Dr. Mt. Shasta CA 96067"></marker>
+    </ng-map> <!-- first lattitude then logitude -->
+
+    <span>Features:</span>
+    <ul>
+        <li>Near I-5, 5 minute to city of Mt. Shasta, 15 minute to Lake Siskiyou or Lake Shastina</li>
+        <li>2800 sq. ft. four upstair bedrooms each with its own bath or shower</li>
+        <li>Full kitchen with bar, separate dining for 8</li>
+        <li>Ample dishes, cutlery, pots, pans, electric skillet, gas BBQ,
+            Jennair stove & oven, crock-pot , coffee maker, toaster oven etc.</li>
+        <li>Satellite TV, DVD, foosball table, hot tub</li>
+        <li>Full air conditioning, washer and dryer</li>
+        <li>Additional 1/2 bath downstairs</li>
+        <li>Spectacular sunsets on west windows for Mt. Eddy and Castle Crags</li>
+    </ul>
+</div>
+
+<div id="div-house-image">
+    <a href="asset/house/{{PHOTO}}.jpg" data-lightbox="house" ng-repeat="PHOTO in CTRL.housePhotos">
+        <img class="house-item" ng-src="asset/house/{{PHOTO}}.jpg">
+    </a>
+</div>

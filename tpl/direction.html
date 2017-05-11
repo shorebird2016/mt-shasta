@@ -1,0 +1,13 @@
+<!-- partial page for second link "Getting there" with map of street, restaurants, park, shops -->
+<div id="div-dir">
+    <!--google maps in the center with shops, restaurants, park-->
+    <ng-map zoom="17" id="dir-ng-map" center="39.423394, -122.224129">
+        <directions draggable="true" panel="div-dir-text" travel-mode="DRIVING"
+                    waypoints="{{CTRL.wayPoints}}" origin="{{CTRL.originCoord}}" destination="{{CTRL.houseCoord}}">
+        </directions>
+    </ng-map>
+
+    <div id="div-dir-text"></div>
+</div>
+<!--style="width: 20%; float:left; padding: 0px 5px;-->
+<!--font-size: smaller; "-->
